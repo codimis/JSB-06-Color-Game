@@ -8,6 +8,7 @@ const choose4 = document.querySelector('.choose-4');
 const choose5 = document.querySelector('.choose-5');
 const choose6 = document.querySelector('.choose-6');
 
+const levelChangeDiv = document.querySelector('.level-change');
 const easyMode = document.querySelector('.easy');
 const mediumMode = document.querySelector('.medium');
 const hardMode = document.querySelector('.hard');
@@ -170,7 +171,7 @@ function check(arg) {
                 );
                 break;
         }
-        visibleEl(btn);
+        visibleEl(btn, levelChangeDiv);
         changeValue(
             [startText, 'Game Over!'], [lifeScore, score], [lifeText, 'Score']
         );
@@ -198,6 +199,7 @@ function modeEvents(mode, px) {
 
 //  ------------------------------- Event Listeners ------------------------------- //
 btn.addEventListener('click', function() {
+    hiddenEl(levelChangeDiv);
     switch (gameMode) {
         case 0:
             visibleEl(choose1, choose2, choose3);
