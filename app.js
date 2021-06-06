@@ -8,6 +8,9 @@ const choose4 = document.querySelector('.choose-4');
 const choose5 = document.querySelector('.choose-5');
 const choose6 = document.querySelector('.choose-6');
 
+const maxScoreScore = document.querySelector('.maxscore-score');
+const maxScoreText = document.querySelector('.maxscore-text');
+
 const levelChangeDiv = document.querySelector('.level-change');
 const easyMode = document.querySelector('.easy');
 const mediumMode = document.querySelector('.medium');
@@ -28,6 +31,7 @@ let backgroudColor;
 let life;
 let score = 0;
 let wrongScore = 0;
+let maxScore = [0, 0, 0];
 let gameMode = 0; // 0-> easy, 1-> medium, 2-> hard
 switch (gameMode) {
     case 0:
@@ -159,12 +163,17 @@ function check(arg) {
 
     // Canı kalmadıysa..
     if (life === 0) {
+        visibleEl(maxScoreScore, maxScoreText);
         switch (gameMode) {
             case 0:
                 hiddenEl(choose1, choose2, choose3, resultText);
+                maxScore[0] = maxScore[0] < score ? score : maxScore[0];
+                changeValue([maxScoreScore, maxScore[0]]);
                 break;
             case 1:
                 hiddenEl(choose1, choose2, choose3, choose4, resultText);
+                maxScore[1] = maxScore[1] < score ? score : maxScore[1];
+                changeValue([maxScoreScore, maxScore[1]]);
                 break;
             case 2:
                 hiddenEl(
@@ -176,6 +185,8 @@ function check(arg) {
                     choose6,
                     resultText
                 );
+                maxScore[2] = maxScore[2] < score ? score : maxScore[2];
+                changeValue([maxScoreScore, maxScore[2]]);
                 break;
         }
         visibleEl(btn, levelChangeDiv);
@@ -206,7 +217,7 @@ function modeEvents(mode, px) {
 
 //  ------------------------------- Event Listeners ------------------------------- //
 btn.addEventListener('click', function() {
-    hiddenEl(levelChangeDiv);
+    hiddenEl(levelChangeDiv, maxScoreScore, maxScoreText);
     switch (gameMode) {
         case 0:
             visibleEl(choose1, choose2, choose3);
