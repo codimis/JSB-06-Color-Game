@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #76d7c4;
+}
+
+.level-change {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.35);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    margin: 50px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.container p {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.container h2 {
+    font-size: 45px;
+    padding: 20px 0px;
+}
+
+.score {
+    width: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.level-change .bar {
+    width: 33%;
+    cursor: pointer;
+}
+
+.easy {
+    background-color: #2ecc71;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.medium {
+    background-color: #a9cce3;
+}
+
+.hard {
+    background-color: #d98880;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.circle {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    inset: -6px 0px 2px 2px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 0px 18px;
+}
+
+.choose-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0px 20px;
+}
+
+.choose {
+    min-width: 350px;
+    margin: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    background-color: #76d7c4;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid black;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+
+footer div {
+    text-decoration: none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    padding: 10px;
+}

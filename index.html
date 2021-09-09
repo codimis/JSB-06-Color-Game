@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+    <title>Color Game</title>
+</head>
+
+<body>
+    <nav>
+        <h1 style="font-size: 32px">
+            Color<span style="font-weight: 100"> Game</span>
+        </h1>
+        <div class="level-change">
+            <div class="circle"></div>
+            <div class="bar easy"></div>
+            <div class="bar medium"></div>
+            <div class="bar hard"></div>
+        </div>
+    </nav>
+
+    <section class="container">
+        <div class="score">
+            <span class="life-text">Life</span
+        ><span
+          id="score"
+          class="life-score"
+          style="font-size: 30px; margin: 5px 0px"
+          >5</span
+        >
+        <span style="margin-top: 10px" class="maxscore-text hidden"
+          >Max Score</span
+        ><span
+          id="score"
+          class="maxscore-score hidden"
+          style="font-size: 30px; margin: 5px 0px"
+          >10</span
+        >
+      </div>
+      <p class="result-text hidden">Correct</p>
+      <h2 class="start-text">Click to start game</h2>
+
+      <div class="choose-container">
+        <span class="choose choose-1 hidden">#545646</span>
+            <span class="choose choose-2 hidden">#545646</span>
+            <span class="choose choose-3 hidden">#545646</span>
+            <div class="choose choose-4 hidden"><span>#545646</span></div>
+            <div class="choose choose-5 hidden"><span>#545646</span></div>
+            <div class="choose choose-6 hidden"><span>#545646</span></div>
+        </div>
+        <button class="btn">Başlat</button>
+    </section>
+
+    <footer>
+        <div>
+            Tasarım :
+            <a style="text-decoration: none; color: white" href="https://github.com/YunusInoluk">Yunus</a
+        >
+        HTML/CSS :
+        <a
+          style="text-decoration: none; color: white"
+          href="https://github.com/hacergizem"
+          >Gizem</a
+        >
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
